@@ -1,23 +1,25 @@
-// volume calculator
-
 #include<iostream>
 
 using namespace std;
-struct Distance
+
+double power(double n, int p)
 {
-    int length;
-    int breadth;
-    int height;
-};
+	double power=1;
+	for(int i=p;i>=1;i--)
+	{
+		power *= n;
+	}
+	return power;
+}
 
 int main()
 {
-    Distance Distan; 
-    cout << "Enter the length, breadth and height (in meters): \n";
-    cin >> Distan.length >> Distan.breadth >> Distan.height;
-    float leng = Distan.length * 3.281;
-    float bread = Distan.breadth * 3.281; float heigh = Distan.height * 3.281;
-    float volume = leng* bread * heigh;
-    cout << "The volume in ft is: " << volume; return 0;
-    return 0;
+	double n;
+	int p;
+	cout << "Enter the n and p:" << endl;
+	cin >> n >> p;
+	cout << "The " << n << " to the power " << p << " is " <<power(n,p);
+	return 0;
 }
+
+
