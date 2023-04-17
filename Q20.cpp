@@ -1,32 +1,33 @@
-/*using structures take input feet and inch and add them  */
+// using function template finding mean of two numbers
 
 #include <iostream>
 using namespace std;
 
-struct Distance 
+
+template <class T1,class T2>
+float functAverage(T1 a, T2 b)
 {
-    int feet;
-    float inches;
-};
+    float avg = (a + b)/2.0;
+    return avg;
+}
+
+int* input()
+{
+    static int arr[1];
+    
+    for (int i = 0; i < 2; i++)
+    {
+        cin >> arr[i];
+    }
+
+    return arr;
+}
 
 int main()
 {
-    Distance d1, d3, d2 = { 11, 6.25 };
+    int* z = input();
 
-    cout << “\nEnter feet: “; cin >> d1.feet;
-    cout << “Enter inches: “; cin >> d1.inches;
-  
-    d3.inches = d1.inches + d2.inches; 
-    d3.feet = 0;
-    if(d3.inches >= 12.0) 
-    { 
-        d3.inches -= 12.0; 
-        d3.feet++; 
-    }
-    d3.feet += d1.feet + d2.feet;
-    
-    cout << d1.feet << "\'-" << d1.inches << "\" +";
-    cout << d2.feet << "\'-" << d2.inches << "\" =";
-    cout << d3.feet << "\'-" << d3.inches << "\"";
+    cout << functAverage(*z, *(z+1)) << endl;
+
     return 0;
 }
