@@ -59,5 +59,51 @@ comments       : are used for documentation comments don't get compile but add l
 cout           : standard output stream
 <<             : stream insertion operator
 >>             : stream extraction operator
+*/
 
+// inline function 
+/*
+during compile-time inline function replaces the calling statement in
+main function with the actual function inorder to reduce process and 
+compile time. we have to use "inline" keyword while defing the function.
+moreover it is not necessary that if we write inline and compiler will replace
+all the functions call with function it is upto compiler to decide 
+syntax
+inline {{data-type}} {{function-name}}(arg1, arg2)
+{
+    // code //
+}
+*/
+
+// static variable
+/*
+are used in a function whose work is to initialize a variable only once 
+in that funciton or loop mainly used in recurssive funcitons and not
+recommended to use with inline function
+*/
+
+//Static Member Function
+/*
+just like static variable static member function are those function which
+once declared its memory can't be changed these fucntions are not associated 
+with the objects of the classes every object points to the same memory.
+*/
+// default arguments
+/*
+int function(int a=32, char s='a')
+{
+    //  code  //
+}
+these will be default values of the function and if we will pass some other 
+values then they will get replaced
+*/
+
+// constant arguments
+/*
+int function(const int a=0, const float pi=32.33)
+{
+    //  code //
+}
+the value of the arguments won't get changed throughout the code even if 
+we will pass some arguments compiler will show error
 */
