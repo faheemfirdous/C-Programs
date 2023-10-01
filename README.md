@@ -2,7 +2,7 @@
 
 ###
 
-<p align="center">This is my C repository</p>
+<p align="center">This is my C++ repository</p>
 
 ###
 
